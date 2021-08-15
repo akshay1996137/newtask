@@ -38,8 +38,7 @@ pipeline {
       stage('nexus'){
           steps{
              echo 'mvn nexus'
-             sh 'nexusArtifactUploader artifacts: [[artifactId: 'junit', classifier: '', file: CI-CD2/target/WebAppCal-1.2.4, type: 'war']], credentialsId: 'a6a4c993-0001-41c3-b87f-d157b70dfc97', groupId: 'com.web.cal', nexusUrl: '52.195.5.101:8081', nexusVersion: 'nexus2', protocol: 'http', repository: 'release', version: '1.2.4''
-             }
+             sh 'nexusArtifactUploader artifacts: [[artifactId: 'servlet-api', classifier: '', file: 'target/ WebAppCal-1.2.4', type: 'war']], credentialsId: 'a6a4c993-0001-41c3-b87f-d157b70dfc97', groupId: 'junit', nexusUrl: '52.195.5.101:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'release', version: '4.8.2}
           }
       }
       
